@@ -24,7 +24,7 @@ export default function Button(props) {
             <span className="sr-only">Loading...</span>
           </>
         ) : (
-          props.childern
+          props.children
         )}
       </span>
     );
@@ -40,7 +40,7 @@ export default function Button(props) {
           target={props.target === "_blank" ? "_blank" : undefined}
           rel={props.target === "_blank" ? "noopener noreferer" : undefined}
         >
-          {props.childern}
+          {props.children}
         </a>
       );
     } else {
@@ -51,7 +51,7 @@ export default function Button(props) {
           style={props.style}
           onClick={onClick}
         >
-          {props.childern}
+          {props.children}
         </Link>
       );
     }
@@ -63,7 +63,7 @@ export default function Button(props) {
       style={props.style}
       onClick={onClick}
     >
-      {props.childern}
+      {props.children}
     </button>
   );
 }
@@ -74,6 +74,7 @@ Button.propTypes = {
   href: propTypes.string,
   target: propTypes.string,
   className: propTypes.string,
+  isPrimary: propTypes.bool,
   isExternal: propTypes.bool,
   isDisabled: propTypes.bool,
   isLoading: propTypes.bool,
