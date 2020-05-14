@@ -76,10 +76,10 @@ export default function Footer(props) {
               </li>
             </ul>
           </div>
-          <div className="row">
-            <div class="copyrights text-center align-items-center">
-              Copyright 2020 All right reserved Staycation
-            </div>
+        </div>
+        <div className="row">
+          <div className="col copyrights text-center">
+            {`Copyright ${new Date().getFullYear()} ● All right reserved ● Staycation`}
           </div>
         </div>
       </div>
