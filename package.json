@@ -2,6 +2,7 @@
   "name": "staycation",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://fajjarnr.github.io/staycation",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
