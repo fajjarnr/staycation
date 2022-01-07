@@ -1,13 +1,13 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import InputDate from "elements/Form/InputDate";
+import InputDate from 'elements/Form/InputDate';
 
 export default class Example extends Component {
   state = {
     value: {
       startDate: new Date(),
       endDate: new Date(),
-      key: "selection",
+      key: 'selection',
     },
   };
 
@@ -20,7 +20,7 @@ export default class Example extends Component {
       <div className="container">
         <div
           className="row align-items-center justify-content-center"
-          style={{ height: "100vh" }}
+          style={{ height: '100vh' }}
         >
           <div className="col-auto">
             <InputDate

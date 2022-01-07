@@ -1,27 +1,30 @@
-import React, { Component } from "react";
-import Fade from "react-reveal/Fade";
+import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
+import { connect } from 'react-redux';
 
-import Header from "parts/Header";
-import PageDetailTitle from "parts/PageDetailTitle";
-import FeaturedImage from "parts/FeaturedImage";
-import PageDetailDescription from "parts/PageDetailDescription";
-import BookingForm from "parts/BookingForm";
-import Categories from "parts/Categories";
-import Testimonial from "parts/Testimony";
-import Footer from "parts/Footer";
+import Header from 'parts/Header';
+import PageDetailTitle from 'parts/PageDetailTitle';
+import FeaturedImage from 'parts/FeaturedImage';
+import PageDetailDescription from 'parts/PageDetailDescription';
+import BookingForm from 'parts/BookingForm';
+import Categories from 'parts/Categories';
+import Testimonial from 'parts/Testimony';
+import Footer from 'parts/Footer';
 
-import itemDetails from "json/itemDetails";
+import itemDetails from 'json/itemDetails';
 
-export default class DetailPage extends Component {
+import { checkoutBooking } from 'store/actions/checkout';
+
+class DetailsPage extends Component {
   componentDidMount() {
-    window.title = "Details Page";
+    window.title = 'Details Page';
     window.scrollTo(0, 0);
   }
 
   render() {
     const breadcrumb = [
-      { pageTitle: "Home", pageHref: "" },
-      { pageTitle: "House Details", pageHref: "" },
+      { pageTitle: 'Home', pageHref: '' },
+      { pageTitle: 'House Details', pageHref: '' },
     ];
 
     return (
@@ -41,7 +44,10 @@ export default class DetailPage extends Component {
             </div>
             <div class="col-5">
               <Fade bottom>
-                <BookingForm itemDetails={itemDetails} />
+                <BookingForm
+                  itemDetails={itemDetails}
+                  startBooking={this.props.checkoutBooking}
+                />
               </Fade>
             </div>
           </div>
@@ -54,3 +60,5 @@ export default class DetailPage extends Component {
     );
   }
 }
+
+export default connect(null, { checkoutBooking })(DetailsPage);
