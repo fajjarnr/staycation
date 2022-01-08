@@ -1,10 +1,10 @@
-import React from "react";
-import Fade from "react-reveal/Fade";
+import React from 'react';
+import Fade from 'react-reveal/Fade';
 
-import { InputText, InputFile } from "elements/Form";
+import { InputText, InputFile } from 'elements/Form';
 
-import logoBca from "assets/images/logo-bca.jpg";
-import logoMandiri from "assets/images/logo-mandiri.jpg";
+import logoBca from 'assets/images/logo-bca.jpg';
+import logoMandiri from 'assets/images/logo-mandiri.jpg';
 
 export default function Payment(props) {
   const { data, ItemDetails, checkout } = props;
@@ -31,7 +31,7 @@ export default function Payment(props) {
                   <dl>
                     <dd>Bank Central Asia</dd>
                     <dd>2208 1996</dd>
-                    <dd>BuildWith Angga</dd>
+                    <dd>Fajar Nur Rohman</dd>
                   </dl>
                 </div>
               </div>
@@ -44,7 +44,7 @@ export default function Payment(props) {
                   <dl>
                     <dd>Bank Mandiri</dd>
                     <dd>2208 1996</dd>
-                    <dd>BuildWith Angga</dd>
+                    <dd>Fajar Nur Rohman</dd>
                   </dl>
                 </div>
               </div>
