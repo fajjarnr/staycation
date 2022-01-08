@@ -1,12 +1,11 @@
-import React, { useRef, useState } from "react";
-import propTypes from "prop-types";
+import React, { useRef, useState } from 'react';
+import propTypes from 'prop-types';
 
-import "./index.scss";
+import './index.scss';
 
 export default function File(props) {
-  const [FileName, setFileName] = useState("");
+  const [FileName, setFileName] = useState('');
   const {
-    value,
     placeholder,
     name,
     accept,
@@ -29,7 +28,7 @@ export default function File(props) {
   };
 
   return (
-    <div className={["input-text mb-3", outerClassName].join(" ")}>
+    <div className={['input-text mb-3', outerClassName].join(' ')}>
       <div className="input-group">
         {prepend && (
           <div className="input-group-prepend bg-gray-900">
@@ -49,7 +48,7 @@ export default function File(props) {
           onClick={() => refInputFile.current.click()}
           defaultValue={FileName}
           placeholder={placeholder}
-          className={["form-control", inputClassName].join(" ")}
+          className={['form-control', inputClassName].join(' ')}
         />
         {append && (
           <div className="input-group-append bg-gray-900">
@@ -62,7 +61,7 @@ export default function File(props) {
 }
 
 File.defaultProps = {
-  placeholder: "Browse a file...",
+  placeholder: 'Browse a file...',
 };
 
 File.propTypes = {
