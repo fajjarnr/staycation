@@ -7,7 +7,7 @@ import PageDetailTitle from 'parts/PageDetailTitle';
 import FeaturedImage from 'parts/FeaturedImage';
 import PageDetailDescription from 'parts/PageDetailDescription';
 import BookingForm from 'parts/BookingForm';
-// import Activities from 'parts/Activities';
+import Activities from 'parts/Activities';
 import Testimony from 'parts/Testimony';
 import Footer from 'parts/Footer';
 
@@ -22,7 +22,7 @@ class DetailsPage extends Component {
     if (!this.props.page[this.props.match.params.id])
       this.props
         .fetchPage(
-          `/detail-page/${this.props.match.params.id}`,
+          `${process.env.REACT_APP_HOST}/api/v1/member/detail-page/${this.props.match.params.id}`,
           this.props.match.params.id
         )
         .then((response) => {
@@ -63,7 +63,7 @@ class DetailsPage extends Component {
           </div>
         </section>
 
-        {/* <Activities data={page[match.params.id].activityId} /> */}
+        <Activities data={page[match.params.id].activityId} />
         <Testimony data={page[match.params.id].testimonial} />
 
         <Footer />
